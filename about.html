@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Over StayNL | Transparant boeken</title>
+  <meta name="description" content="Lees hoe StayNL Nederlandse hotels selecteert en hoe het affiliate model eerlijk zichtbaar blijft.">
+  <meta property="og:title" content="Over StayNL">
+  <meta property="og:description" content="Een premium hotelgids met een transparant affiliate model.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1584003564911-6a7a8a24f7b5?w=1200">
+  <link rel="icon" href="staynl-logo-compact.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Instrument+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&family=Syne+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css?v=6">
+  <link rel="stylesheet" href="css/pages/hotel.css">
+  <link rel="stylesheet" href="css/pages/about.css">
+</head>
+<body data-page="about">
+  <nav class="site-nav" aria-label="Hoofdnavigatie">
+    <div class="nav-inner">
+      <a class="wordmark" href="index.html" aria-label="StayNL home"><img src="staynl-logo.png" alt="StayNL"></a>
+      <div class="nav-links">
+        <a href="results.html" data-nav="discover">Ontdek</a>
+        <a href="destination.html?city=Amsterdam" data-nav="cities">Steden</a>
+        <a href="about.html" data-nav="about">Over ons</a>
+      </div>
+      <div class="nav-actions">
+        <a class="btn btn-outline-blue" href="#contact">Hotel aanmelden</a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-label="Menu openen" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <aside class="mobile-drawer" data-mobile-drawer aria-label="Mobiele navigatie">
+    <a href="results.html">Ontdek</a>
+    <a href="destination.html?city=Amsterdam">Steden</a>
+    <a href="about.html">Over ons</a>
+    <a href="#contact">Hotel aanmelden</a>
+  </aside>
+
+  <main>
+    <section class="about-hero">
+      <div class="container">
+        <span class="section-label">Over StayNL</span>
+        <h1>Een hotelgids die de boekkeuze niet verstopt.</h1>
+        <p>StayNL is ontworpen voor reizigers die mooie hotels willen vinden én willen begrijpen waar hun reservering terechtkomt.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container about-layout">
+        <div class="about-copy">
+          <article>
+            <span class="section-label">Missie</span>
+            <h2>Rustiger zoeken, beter kiezen</h2>
+            <p>Online hotelzoeken voelt vaak alsof elke knop harder schreeuwt dan de vorige. StayNL draait dat om. We brengen Nederlandse hotels samen in een typografisch rustige, redactionele omgeving waar sfeer, locatie en boekroute meteen duidelijk zijn.</p>
+            <p>De selectie in deze demo is dummy data, maar het productmodel is echt: een directory waarin directe hotelwebsites en affiliate boekingsplatforms naast elkaar kunnen bestaan.</p>
+          </article>
+
+          <article class="affiliate-panel" id="affiliate">
+            <span class="section-label">Affiliate model</span>
+            <h2>Transparant verdienen</h2>
+            <p>Als een bezoeker via Booking.com reserveert, kan StayNL een commissie ontvangen. Dat hoeft de prijs voor de reiziger niet te verhogen. Belangrijker: de directe hotelwebsite blijft even zichtbaar, zodat een gebruiker zelf kan bepalen welke route beter past.</p>
+            <p>Affiliate inkomsten werken alleen duurzaam wanneer vertrouwen voorop staat. Daarom maakt StayNL de commerciële laag expliciet in plaats van onzichtbaar.</p>
+          </article>
+        </div>
+
+        <aside class="contact-card" id="contact">
+          <span class="section-label">Contact</span>
+          <h2>Hotel aanmelden</h2>
+          <p>Heeft u een hotel dat past bij StayNL? Stuur naam, locatie en website. De redactie bekijkt of het adres aansluit bij de gids.</p>
+          <form class="contact-form" data-contact-form>
+            <label for="name">Naam
+              <input id="name" name="name" type="text" required autocomplete="name">
+            </label>
+            <label for="email">E-mail
+              <input id="email" name="email" type="email" required autocomplete="email">
+            </label>
+            <label for="message">Bericht
+              <textarea id="message" name="message" required></textarea>
+            </label>
+            <button class="btn btn-blue" type="submit">Verstuur bericht</button>
+          </form>
+          <div class="form-message" data-form-message role="status"></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="wordmark" href="index.html" aria-label="StayNL home"><img src="staynl-logo.png" alt="StayNL"></a>
+          <p>Een premium Nederlandse hotelgids voor reizigers die sfeer, transparantie en keuze belangrijk vinden.</p>
+        </div>
+        <div class="footer-links">
+          <strong>Navigatie</strong>
+          <a href="results.html">Ontdek hotels</a>
+          <a href="destination.html?city=Amsterdam">Steden</a>
+          <a href="about.html">Over ons</a>
+        </div>
+        <div class="footer-links">
+          <strong>Contact & Info</strong>
+          <a href="#affiliate">Affiliate model</a>
+          <a href="#contact">Hotel aanmelden</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 StayNL</span>
+        <span>Powered by affiliate partnerships with Booking.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/ui.js"></script>
+</body>
+</html>

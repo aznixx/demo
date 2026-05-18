@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hotels per stad | StayNL</title>
+  <meta name="description" content="Ontdek hotels per Nederlandse stad met redactionele tips en twee transparante boekroutes.">
+  <meta property="og:title" content="Hotels per stad | StayNL">
+  <meta property="og:description" content="Stadspagina's voor Amsterdam, Rotterdam, Utrecht, Den Haag, Maastricht en Haarlem.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1584003564911-6a7a8a24f7b5?w=1200">
+  <link rel="icon" href="staynl-logo-compact.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Instrument+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&family=Syne+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css?v=6">
+  <link rel="stylesheet" href="css/pages/results.css">
+  <link rel="stylesheet" href="css/pages/destination.css?v=2">
+</head>
+<body data-page="cities">
+  <nav class="site-nav" aria-label="Hoofdnavigatie">
+    <div class="nav-inner">
+      <a class="wordmark" href="index.html" aria-label="StayNL home"><img src="staynl-logo.png" alt="StayNL"></a>
+      <div class="nav-links">
+        <a href="results.html" data-nav="discover">Ontdek</a>
+        <a href="destination.html?city=Amsterdam" data-nav="cities">Steden</a>
+        <a href="about.html" data-nav="about">Over ons</a>
+      </div>
+      <div class="nav-actions">
+        <a class="btn btn-outline-blue" href="about.html#contact">Hotel aanmelden</a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-label="Menu openen" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <aside class="mobile-drawer" data-mobile-drawer aria-label="Mobiele navigatie">
+    <a href="results.html">Ontdek</a>
+    <a href="destination.html?city=Amsterdam">Steden</a>
+    <a href="about.html">Over ons</a>
+    <a href="about.html#contact">Hotel aanmelden</a>
+  </aside>
+
+  <main data-destination-page>
+    <section class="destination-hero">
+      <img data-city-image src="https://images.unsplash.com/photo-1584003564911-6a7a8a24f7b5?w=1200" alt="Amsterdam" width="1200" height="800">
+      <div class="container">
+        <span class="section-label">StayNL stadsgids</span>
+        <h1 data-city-name>Amsterdam</h1>
+        <p data-city-intro>Grachten, musea en intieme hotels met geschiedenis achter elke gevel.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="section-label">Geselecteerde hotels</span>
+            <h2>Verblijven met lokaal karakter</h2>
+          </div>
+          <a class="btn btn-outline-blue" href="results.html">Alle resultaten</a>
+        </div>
+        <div class="destination-grid" data-city-hotels></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="section-label">Reisnotities</span>
+            <h2>Tips voor een beter bezoek</h2>
+          </div>
+          <p>Kort, praktisch en redactioneel: precies genoeg richting zonder de stad dicht te plannen.</p>
+        </div>
+        <div class="tips-grid" data-city-tips></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="wordmark" href="index.html" aria-label="StayNL home"><img src="staynl-logo.png" alt="StayNL"></a>
+          <p>Een premium Nederlandse hotelgids voor reizigers die sfeer, transparantie en keuze belangrijk vinden.</p>
+        </div>
+        <div class="footer-links">
+          <strong>Navigatie</strong>
+          <a href="results.html">Ontdek hotels</a>
+          <a href="destination.html?city=Amsterdam">Steden</a>
+          <a href="about.html">Over ons</a>
+        </div>
+        <div class="footer-links">
+          <strong>Contact & Info</strong>
+          <a href="about.html#affiliate">Affiliate model</a>
+          <a href="about.html#contact">Hotel aanmelden</a>
+          <a href="about.html#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 StayNL</span>
+        <span>Powered by affiliate partnerships with Booking.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/hotels.js?v=2"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/search.js?v=3"></script>
+</body>
+</html>

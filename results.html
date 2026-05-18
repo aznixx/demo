@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hotels zoeken | StayNL</title>
+  <meta name="description" content="Filter Nederlandse hotels op prijs, sterren, voorzieningen en locatie. Boek via hotelwebsite of Booking.com.">
+  <meta property="og:title" content="Hotels zoeken | StayNL">
+  <meta property="og:description" content="Vergelijk Nederlandse hotels met twee duidelijke boekroutes.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1584003564911-6a7a8a24f7b5?w=1200">
+  <link rel="icon" href="staynl-logo-compact.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Instrument+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&family=Syne+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css?v=6">
+  <link rel="stylesheet" href="css/pages/results.css">
+</head>
+<body data-page="discover">
+  <nav class="site-nav" aria-label="Hoofdnavigatie">
+    <div class="nav-inner">
+      <a class="wordmark" href="index.html" aria-label="StayNL home"><img src="staynl-logo.png" alt="StayNL"></a>
+      <div class="nav-links">
+        <a href="results.html" data-nav="discover">Ontdek</a>
+        <a href="destination.html?city=Amsterdam" data-nav="cities">Steden</a>
+        <a href="about.html" data-nav="about">Over ons</a>
+      </div>
+      <div class="nav-actions">
+        <a class="btn btn-outline-blue" href="about.html#contact">Hotel aanmelden</a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-label="Menu openen" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <aside class="mobile-drawer" data-mobile-drawer aria-label="Mobiele navigatie">
+    <a href="results.html">Ontdek</a>
+    <a href="destination.html?city=Amsterdam">Steden</a>
+    <a href="about.html">Over ons</a>
+    <a href="about.html#contact">Hotel aanmelden</a>
+  </aside>
+
+  <main>
+    <section class="results-intro">
+      <div class="container">
+        <span class="section-label">Hotel directory</span>
+        <h1>Vergelijk hotels met een duidelijke boekkeuze.</h1>
+        <form class="search-box results-search" data-search-form aria-label="Zoekopdracht aanpassen">
+          <div class="search-zone">
+            <label for="results-destination">Bestemming</label>
+            <div class="search-input-wrap">
+              <svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.2 4.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <input id="results-destination" name="destination" type="search" placeholder="Stad of hotel...">
+            </div>
+          </div>
+          <div class="search-zone">
+            <label for="results-checkin">Check-in</label>
+            <input id="results-checkin" name="checkin" type="date">
+          </div>
+          <div class="search-zone">
+            <label for="results-checkout">Check-out</label>
+            <input id="results-checkout" name="checkout" type="date">
+          </div>
+          <div class="search-zone">
+            <label for="results-guests">Gasten</label>
+            <select id="results-guests" name="guests">
+              <option value="1">1 gast</option>
+              <option value="2" selected>2 gasten</option>
+              <option value="3">3 gasten</option>
+              <option value="4">4+ gasten</option>
+            </select>
+          </div>
+          <button class="btn btn-gold search-submit" type="submit">Zoeken &rarr;</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="results-page">
+      <div class="container results-layout">
+        <aside class="filter-panel" aria-label="Filters">
+          <h2>Filters</h2>
+          <button class="filter-reset" type="button" data-filter-reset>Filters wissen</button>
+
+          <div class="filter-group">
+            <h3>Prijs</h3>
+            <div class="range-meta"><span>Maximaal</span><strong class="mono" data-price-label>&euro;450</strong></div>
+            <input type="range" min="90" max="450" step="10" value="450" data-filter="price" aria-label="Maximale prijs per nacht">
+          </div>
+
+          <fieldset class="filter-group">
+            <legend>Sterren</legend>
+            <div class="filter-options">
+              <label class="check-option"><input type="checkbox" value="5" data-star-filter><span class="custom-check"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 8.2 6.4 11.2 12.8 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>5 sterren</label>
+              <label class="check-option"><input type="checkbox" value="4" data-star-filter><span class="custom-check"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 8.2 6.4 11.2 12.8 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>4 sterren</label>
+              <label class="check-option"><input type="checkbox" value="3" data-star-filter><span class="custom-check"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 8.2 6.4 11.2 12.8 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>3 sterren</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="filter-group">
+            <legend>Voorzieningen</legend>
+            <div class="filter-options">
+              <label class="check-option"><input type="checkbox" value="wifi" data-amenity-filter><span class="custom-check"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 8.2 6.4 11.2 12.8 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>WiFi</label>
+              <label class="check-option"><input type="checkbox" value="parking" data-amenity-filter><span class="custom-check"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 8.2 6.4 11.2 12.8 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Parking</label>
+              <label class="check-option"><input type="checkbox" value="pool" data-amenity-filter><span class="custom-check"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 8.2 6.4 11.2 12.8 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Zwembad</label>
+              <label class="check-option"><input type="checkbox" value="breakfast" data-amenity-filter><span class="custom-check"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 8.2 6.4 11.2 12.8 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Ontbijt</label>
+              <label class="check-option"><input type="checkbox" value="pets" data-amenity-filter><span class="custom-check"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 8.2 6.4 11.2 12.8 4.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Huisdieren</label>
+            </div>
+          </fieldset>
+
+          <div class="filter-group">
+            <h3>Locatie</h3>
+            <div class="range-meta"><span>Vanaf centrum</span><strong class="mono" data-distance-label>10 km</strong></div>
+            <input type="range" min="1" max="10" step="1" value="10" data-filter="distance" aria-label="Afstand vanaf centrum">
+          </div>
+        </aside>
+
+        <section class="results-main" aria-live="polite">
+          <div class="results-topbar">
+            <div class="results-count" data-results-count>Hotels laden</div>
+            <div class="results-controls">
+              <select class="sort-control" data-sort aria-label="Sorteer hotels">
+                <option value="relevance">Relevantie</option>
+                <option value="price">Prijs laag-hoog</option>
+                <option value="rating">Beste beoordeling</option>
+              </select>
+              <div class="view-toggle" aria-label="Weergave">
+                <button type="button" class="is-active" data-view-mode="grid" aria-label="Lijstkaarten"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+                <button type="button" data-view-mode="card" aria-label="Compact grid"><svg class="svg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
+              </div>
+            </div>
+          </div>
+          <div class="results-grid grid-mode" data-results-grid></div>
+          <nav class="pagination" data-pagination aria-label="Paginering"></nav>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="wordmark" href="index.html" aria-label="StayNL home"><img src="staynl-logo.png" alt="StayNL"></a>
+          <p>Een premium Nederlandse hotelgids voor reizigers die sfeer, transparantie en keuze belangrijk vinden.</p>
+        </div>
+        <div class="footer-links">
+          <strong>Navigatie</strong>
+          <a href="results.html">Ontdek hotels</a>
+          <a href="destination.html?city=Amsterdam">Steden</a>
+          <a href="about.html">Over ons</a>
+        </div>
+        <div class="footer-links">
+          <strong>Contact & Info</strong>
+          <a href="about.html#affiliate">Affiliate model</a>
+          <a href="about.html#contact">Hotel aanmelden</a>
+          <a href="about.html#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 StayNL</span>
+        <span>Powered by affiliate partnerships with Booking.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/hotels.js?v=2"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/search.js?v=3"></script>
+  <script src="js/filters.js"></script>
+</body>
+</html>

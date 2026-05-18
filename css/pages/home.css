@@ -1,0 +1,346 @@
+.home-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  min-height: 680px;
+  overflow: hidden;
+}
+
+.hero-left {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  min-height: 680px;
+  padding: 80px 60px;
+  background: var(--color-blue);
+  color: var(--color-canvas);
+  animation: slideInLeft 0.9s var(--ease-editorial) forwards;
+}
+
+.hero-left::before {
+  content: "";
+  position: absolute;
+  top: 80px;
+  bottom: 80px;
+  left: 32px;
+  width: 1px;
+  background: var(--color-accent);
+}
+
+.hero-copy {
+  max-width: 560px;
+}
+
+.hero-label {
+  display: block;
+  margin-bottom: 28px;
+  color: var(--color-accent);
+  font-family: var(--font-subhead);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.hero-copy h1 {
+  color: var(--color-canvas);
+  font-size: clamp(68px, 8vw, 96px);
+  font-style: italic;
+  line-height: 1;
+}
+
+.hero-copy p {
+  max-width: 380px;
+  margin-top: 28px;
+  color: var(--color-cream-muted);
+}
+
+.hero-rule {
+  width: 40px;
+  height: 1px;
+  margin: 34px 0 24px;
+  background: var(--color-accent);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 34px;
+  color: var(--color-cream-muted);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.hero-right {
+  position: relative;
+  min-height: 680px;
+  margin-left: -36px;
+  animation: slideInRight 0.9s var(--ease-editorial) 0.15s both;
+}
+
+.hero-right img {
+  width: calc(100% + 36px);
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-caption {
+  position: absolute;
+  left: 32px;
+  bottom: 34px;
+  max-width: 320px;
+  padding: 18px;
+  border-radius: var(--radius-medium);
+  background: var(--color-white);
+  box-shadow: var(--shadow-card-strong);
+}
+
+.hero-caption span {
+  display: block;
+  color: var(--color-accent-dark);
+  font-family: var(--font-subhead);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-caption strong {
+  display: block;
+  margin-top: 5px;
+  font-family: var(--font-display);
+  font-size: 22px;
+  line-height: 1.05;
+}
+
+.hero-caption p {
+  margin-top: 4px;
+  color: var(--color-ink-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.destination-bento {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: 210px;
+  gap: 18px;
+}
+
+.destination-tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-medium);
+  background: var(--color-ink);
+  color: var(--color-white);
+  box-shadow: var(--shadow-card);
+}
+
+.destination-tile.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.destination-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  transition: transform var(--transition-smooth), opacity var(--transition-fast);
+}
+
+.destination-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--color-overlay-bottom), var(--color-overlay-soft));
+  transition: opacity var(--transition-fast);
+}
+
+.destination-tile::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 0;
+  z-index: 2;
+  height: 2px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-fast);
+}
+
+.destination-tile:hover img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.destination-tile:hover::after {
+  opacity: 0.84;
+}
+
+.destination-tile:hover::before {
+  transform: scaleX(1);
+}
+
+.destination-tile__text {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  z-index: 3;
+}
+
+.destination-tile__text h3 {
+  color: var(--color-white);
+  font-size: 34px;
+  font-style: italic;
+}
+
+.destination-tile__text span {
+  color: var(--color-cream-muted);
+  font-size: 13px;
+}
+
+.featured-strip {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 22px;
+  overflow: visible;
+  padding: 14px 0 10px;
+}
+
+.featured-strip .editorial-card {
+  width: 100%;
+  min-height: 440px;
+}
+
+.featured-strip .editorial-card .card-image {
+  height: 250px;
+}
+
+.booking-model {
+  background: var(--color-ink);
+  color: var(--color-canvas);
+}
+
+.booking-model h2 {
+  color: var(--color-canvas);
+  font-size: clamp(52px, 7vw, 86px);
+}
+
+.booking-model p {
+  color: var(--color-cream-muted);
+}
+
+.booking-model__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(320px, 0.65fr);
+  gap: 80px;
+  align-items: start;
+}
+
+.booking-model__copy {
+  display: grid;
+  gap: 22px;
+}
+
+.model-list {
+  display: grid;
+  gap: 28px;
+}
+
+.model-list li {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr);
+  gap: 20px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--color-cream-faint);
+}
+
+.model-list span {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 22px;
+}
+
+.model-list h3 {
+  color: var(--color-canvas);
+  font-family: var(--font-subhead);
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+@media (max-width: 980px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-left,
+  .hero-right {
+    min-height: 540px;
+  }
+
+  .hero-right {
+    margin-left: 0;
+  }
+
+  .hero-right img {
+    width: 100%;
+  }
+
+  .destination-bento {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .featured-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .booking-model__grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero-left {
+    min-height: 520px;
+    padding: 64px 28px 56px 44px;
+  }
+
+  .hero-left::before {
+    left: 20px;
+    top: 56px;
+    bottom: 56px;
+  }
+
+  .hero-copy h1 {
+    font-size: 64px;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-caption {
+    left: 16px;
+    right: 16px;
+    bottom: 18px;
+  }
+
+  .destination-bento {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 220px;
+  }
+
+  .destination-tile.large {
+    grid-column: auto;
+    grid-row: span 2;
+  }
+
+  .featured-strip {
+    grid-template-columns: 1fr;
+  }
+}

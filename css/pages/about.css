@@ -1,0 +1,72 @@
+.about-hero {
+  padding: 82px 0 72px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-hero h1 {
+  max-width: 850px;
+  font-size: clamp(58px, 7vw, 92px);
+}
+
+.about-hero p {
+  max-width: 720px;
+  margin-top: 22px;
+  font-size: 18px;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 58px;
+  align-items: start;
+}
+
+.about-copy {
+  display: grid;
+  gap: 42px;
+}
+
+.about-copy h2,
+.contact-card h2 {
+  margin-bottom: 14px;
+  font-size: 48px;
+}
+
+.affiliate-panel,
+.contact-card {
+  padding: 28px;
+  border-radius: var(--radius-medium);
+  background: var(--color-white);
+  box-shadow: var(--shadow-card);
+}
+
+.contact-form {
+  display: grid;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  padding-top: 12px;
+  resize: vertical;
+}
+
+.form-message {
+  display: none;
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: var(--radius-small);
+  background: var(--color-blue-light);
+  color: var(--color-blue);
+}
+
+.form-message.is-visible {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+}
