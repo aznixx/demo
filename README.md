@@ -19,6 +19,10 @@ staynl/
 │       ├── home.css
 │       ├── results.css
 │       └── hotel.css
+├── assets/
+│   ├── cities/
+│   ├── icons/
+│   └── logos/
 ├── js/
 │   ├── hotels.js
 │   ├── search.js

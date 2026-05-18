@@ -102,7 +102,7 @@
           <span class="price">v.a. &euro;${hotel.pricePerNight} / nacht</span>
           <div class="result-actions">
             <a class="btn btn-outline-blue" href="${hotel.hotelWebsiteUrl}" target="_blank" rel="noopener">Hotelwebsite &rarr;</a>
-            <a class="btn btn-booking" href="${hotel.bookingAffiliateUrl}" target="_blank" rel="noopener"><img class="booking-badge" src="Booking.com_Icon_2022.svg" alt="">Boek via Booking.com</a>
+            <a class="btn btn-booking" href="${hotel.bookingAffiliateUrl}" target="_blank" rel="noopener"><img class="booking-badge" src="assets/icons/booking-icon.svg" alt="">Boek via Booking.com</a>
           </div>
         </div>
       </div>

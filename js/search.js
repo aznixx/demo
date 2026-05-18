@@ -1,11 +1,11 @@
 (function () {
   const cityImages = {
-    Amsterdam: "Amsterdam.jpg",
-    Rotterdam: "rotterdam-hd.jpg",
-    Utrecht: "utrecht.jpg",
-    "Den Haag": "denhaag.jpg",
-    Maastricht: "maastricht.jpg",
-    Haarlem: "haarlem.jpg"
+    Amsterdam: "assets/cities/Amsterdam.jpg",
+    Rotterdam: "assets/cities/rotterdam-hd.jpg",
+    Utrecht: "assets/cities/utrecht.jpg",
+    "Den Haag": "assets/cities/denhaag.jpg",
+    Maastricht: "assets/cities/maastricht.jpg",
+    Haarlem: "assets/cities/haarlem.jpg"
   };
 
   const cityText = {
